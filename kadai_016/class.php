@@ -15,10 +15,7 @@
              private $name;
              private $price;
 
-             public function set_name(string $name) {
-                $this->name = $name;
-         }
-             public function set_price(int $price) {
+             public function show_price(int $price) {
                 $this->price = $price;
          }
         }
@@ -29,28 +26,19 @@
              public $height;
              public $weight;
 
-             public function set_name(string $name) {
-                $this->name = $name;
-         }
-             public function set_height(int $height) {
-                $this->height = $height;
-         }
-             public function set_weight(int $weight) {
+             public function show_height(int $weight) {
                 $this->weight = $weight;
          }
         }
 
-         $show_price = new Food();
-         $show_price->set_name('potato') ;
-         $show_price->set_price(250);
-        print_r($show_price);
+         $food1 = new Food();
+         $food1->show_price(250);
+        print_r($food1);
         echo '<br>';
         
-         $show_height = new Animal ();
-         $show_height->set_name('dog') ;
-         $show_height->set_height(60);
-         $show_height->set_weight(5000);
-         print_r($show_height);
+         $Animal1 = new Animal ();
+         $Animal1->show_height(5000);
+         print_r($Animal1);
          ?>
      </p>
  </body>
