@@ -9,9 +9,7 @@
  <body>
      <p>
          <?php
-         // クラスを定義する
          class Food {
-             // プロパティを定義する
              private $name;
              private $price;
 
@@ -19,10 +17,12 @@
                 $this->name = $name;
                 $this->price = $price;
          }
+             public function show_price() {
+                echo $this->price;
+         }
         }
 
          class Animal {
-             // プロパティを定義する
              public $name;
              public $height;
              public $weight;
@@ -32,13 +32,23 @@
                 $this->height = $height;
                 $this->weight = $weight;
          }
+         public function show_height() {
+                echo $this->height;
+         }
         }
-         $show_price = new Food('potaro',250);
-         $show_height = new Animal ('dog' , 60 , 5000);
          
-         print_r($show_price);
+         $tomato = new Food ('potaro',250);
+         $dog = new Animal ('dog' , 60 , 5000);
+
+         print_r($tomato);
          echo '<br>';
-         print_r($show_height);
+         print_r($dog);
+         echo '<br>';
+
+         $tomato->show_price();
+         echo '<br>';
+         $dog->show_height();
+
          ?>
      </p>
  </body>
